@@ -1,6 +1,5 @@
 /* ============================================
    Chronos Time Pieces — base styles
-   Build the store onto this foundation.
    ============================================ */
 
 :root {
@@ -62,11 +61,27 @@ a { color: inherit; text-decoration: none; }
 .section { padding: 80px 32px; border-top: 1px solid var(--line); }
 .section h2 { font-size: 2.4rem; margin-bottom: 12px; }
 
-/* Footer */
-.site-footer { padding: 48px 0; border-top: 1px solid var(--line); color: var(--steel); font-size: 0.85rem; }
-.site-footer .disclaimer { margin-top: 14px; max-width: 640px; line-height: 1.7; }
-
-@media (max-width: 640px) {
-  .main-nav { display: none; }
-  .container { padding: 0 20px; }
+/* Watch grid */
+.watch-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 36px; }
+.watch-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 22px;
+  transition: transform 0.3s, border-color 0.3s;
 }
+.watch-card:hover { transform: translateY(-5px); border-color: rgba(199, 169, 100, 0.3); }
+.watch-photo {
+  height: 180px; display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #1f2730, #11161c);
+  color: var(--steel); font-size: 0.8rem; letter-spacing: 0.1em;
+  border-radius: 3px; margin-bottom: 18px;
+}
+.watch-brand { font-size: 0.66rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--steel); }
+.watch-model { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin: 4px 0 2px; }
+.watch-ref { font-size: 0.8rem; color: var(--bone-dim); margin-bottom: 14px; }
+.card-price { font-size: 0.8rem; color: var(--steel); text-decoration: line-through; }
+.wire-label { font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-top: 6px; }
+.wire-price { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--bone); }
+.inquire-btn {
+  margin-top: 16px; width: 100%;
